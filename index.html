@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#125c57">
+  <meta name="description" content="Träna 36 begrepp om Egypten och de första flodkulturerna med begreppskort, quiz och para ihop.">
+  <title>Flodresan – träna historiens begrepp</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#training">Hoppa till träningen</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="Flodresan, startsida"><span class="brand-icon" aria-hidden="true">≈</span>Flodresan<span class="brand-dot">.</span></a>
+    <span class="header-note">En upptäcktsresa genom historien</span>
+    <button class="quiet" id="help-button" type="button">Så fungerar det <span aria-hidden="true">↗</span></button>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow"><span></span> HISTORIA · EGYPTEN & MESOPOTAMIEN</p>
+        <h1 id="page-title">Stora civilisationer.<br><em>Små steg till kunskap.</em></h1>
+        <p>Från Nilens stränder till de första skrivtecknen. Upptäck begreppen, testa dig själv och låt kunskapen växa.</p>
+        <div class="hero-tags"><span>36 begrepp</span><span>4 sätt att lära</span><span>I din egen takt</span></div>
+      </div>
+      <div class="landscape" aria-hidden="true">
+        <svg viewBox="0 0 500 280" role="presentation"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#eee4cf"/><stop offset="1" stop-color="#f8f1df"/></linearGradient></defs><rect width="500" height="280" rx="24" fill="url(#sky)"/><circle cx="361" cy="75" r="33" fill="#dca658"/><path d="M0 195Q100 140 230 190T500 170V280H0Z" fill="#e9d7b2"/><path d="M52 207 175 51 299 207Z" fill="#d5ae72"/><path d="m175 51 28 156h96Z" fill="#bb8c51"/><path d="m274 211 77-98 79 98Z" fill="#d9ba85"/><path d="m351 113 18 98h61Z" fill="#c29b64"/><path d="M0 226Q110 202 231 230T500 218V280H0Z" fill="#f0e3c9"/><path d="M500 225Q310 220 280 252T60 280H500Z" fill="#7ea9a1"/><path d="M486 244q-70-8-102 3m57 13q-65-7-91 1" stroke="#c7ddd1" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M84 244v-60m0 10q-11-20-29-7m29 7q11-23 27-11m-27 11q-1-22-13-26m13 26q16-10 29-2" stroke="#466e55" stroke-width="5" fill="none" stroke-linecap="round"/><path d="m321 69 9-4 9 4m-34 17 6-3 6 3" stroke="#9e895f" stroke-width="2" fill="none"/></svg>
+        <span class="landscape-caption">NÄSTA STOPP: FORNTIDEN</span>
+      </div>
+    </section>
+    <section class="journey" aria-label="Dina framsteg">
+      <div class="journey-label"><span class="small-icon" aria-hidden="true">✦</span><div><strong>Din kunskap växer</strong><small id="progress-note">Varje litet steg räknas.</small></div></div>
+      <div class="progress-block"><div><span>Trygga begrepp</span><strong id="progress-count">0 / 36</strong></div><progress id="knowledge-progress" value="0" max="36">0 av 36</progress></div>
+      <div class="journey-stat"><strong id="practiced-count">0</strong><span>begrepp tränade</span></div>
+      <div class="journey-stat"><strong id="review-count">0</strong><span>att öva mer på</span></div>
+    </section>
+    <section id="training" class="training" aria-label="Begreppsträning">
+      <div class="section-intro"><div><p class="eyebrow">LÄR DIG · TESTA · REPETERA</p><h2>Hur vill du träna idag?</h2></div><span class="local-note"><span aria-hidden="true">◉</span> Dina framsteg sparas på den här enheten</span></div>
+      <nav class="modes" aria-label="Välj träningssätt">
+        <button class="mode active" data-mode="cards" aria-pressed="true"><span aria-hidden="true">▣</span><span>Begreppskort<small>Lär känna orden</small></span></button>
+        <button class="mode" data-mode="quiz" aria-pressed="false"><span aria-hidden="true">✦</span><span>Quiz<small>Testa dina kunskaper</small></span></button>
+        <button class="mode" data-mode="match" aria-pressed="false"><span aria-hidden="true">⇄</span><span>Para ihop<small>Hitta rätt samband</small></span></button>
+        <button class="mode" data-mode="library" aria-pressed="false"><span aria-hidden="true">☷</span><span>Alla begrepp<small>Din lilla uppslagsbok</small></span></button>
+      </nav>
+      <div class="filters"><label>Område <select id="category"><option value="all">Alla områden</option><option value="nature">Jordbruk & floder</option><option value="society">Makt & samhälle</option><option value="culture">Skrift & tro</option></select></label><label id="length-label">Passlängd <select id="length"><option value="5">5 begrepp</option><option value="10" selected>10 begrepp</option><option value="36">Alla begrepp</option></select></label><label class="review-toggle"><input type="checkbox" id="review-only"><span>Öva på svåra <span id="review-badge" class="badge">0</span></span></label></div>
+      <div id="workspace"></div>
+      <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+    <aside class="learning-tip"><span aria-hidden="true">☀</span><p><strong>Ett tips på vägen</strong> Förklara begreppet högt med egna ord innan du visar svaret. Kan du ge ett exempel också?</p></aside>
+  </main>
+  <footer class="wrap"><span>Flodresan · Nyfikenhet tar dig långt.</span><div><span>Utifrån läromaterialet <cite>Flodkulturer (Egypten)</cite></span><button class="text-button" id="reset-button">Nollställ framsteg</button></div></footer>
+  <dialog id="help-dialog"><button class="dialog-close quiet" id="close-help" aria-label="Stäng">×</button><p class="eyebrow">VÄLKOMMEN TILL FLODRESAN</p><h2>Lite träning. Fler aha!</h2><p>Välj ett område och ett träningssätt. Ett kort pass är en bra början.</p><ul><li><strong>Begreppskort:</strong> tänk ut svaret, vänd kortet och bedöm hur det gick.</li><li><strong>Quiz:</strong> välj en förklaring och få återkoppling direkt.</li><li><strong>Para ihop:</strong> välj ett begrepp och dess förklaring.</li><li><strong>Alla begrepp:</strong> sök och läs i lugn och ro.</li></ul><p>Ett begrepp blir <strong>tryggt</strong> efter två rätta svar i följd. Självbedömning på kort räknas också. Felsvar samlas under <strong>Öva på svåra</strong> tills du svarar rätt igen.</p><p>Framstegen sparas bara i denna webbläsare. Ingen inloggning behövs och inga elevuppgifter skickas iväg.</p><p id="storage-note"></p><button class="primary" id="help-done">Då kör vi!</button></dialog>
+  <dialog id="reset-dialog"><h2>Börja om från början?</h2><p>Alla sparade svar på den här enheten tas bort. Det går inte att ångra.</p><div class="actions"><button class="secondary" id="cancel-reset">Behåll framsteg</button><button class="primary" id="confirm-reset">Nollställ</button></div></dialog>
+</body>
+</html>
